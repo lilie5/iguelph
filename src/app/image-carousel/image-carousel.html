@@ -1,0 +1,18 @@
+@if (gridTiles().length > 0) {
+  <section class="collage" aria-label="Image collage">
+    <mat-grid-list
+      class="collage-grid"
+      [cols]="gridColumns"
+      [rowHeight]="gridRowHeight"
+      [gutterSize]="gridGutter"
+    >
+      @for (tile of gridTiles(); track tile.src) {
+        <mat-grid-tile class="collage-tile" [colspan]="tile.colSpan" [rowspan]="tile.rowSpan">
+          <figure class="tile-frame">
+            <img [src]="tile.src" [alt]="tile.alt" />
+          </figure>
+        </mat-grid-tile>
+      }
+    </mat-grid-list>
+  </section>
+}

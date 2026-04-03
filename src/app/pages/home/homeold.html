@@ -1,0 +1,304 @@
+<div class="hero-carousel">
+    <app-image-carousel
+        [images]="['assets/labstuff.jpg','assets/igempresentation.jpg', 'assets/idksomewhere.jpg','assets/teamhappy.jpeg', 'assets/theyresittinghappy.jpg']"
+        [tileSpans]="[
+        { colSpan: 8, rowSpan: 6 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 6, rowSpan: 6 },
+        { colSpan: 6, rowSpan: 6 }]"></app-image-carousel>
+
+    <div class="hero-overlay">
+        <h1 class="hero-title">iGEM Guelph</h1>
+        <h3 class="hero-subtitle">CANADA'S MOST PASSIONATE SYNTHETIC BIOLOGY TEAM.</h3>
+    </div>
+</div>
+
+<div class="red-line"></div>
+
+<mat-grid-list>
+    <mat-grid-tile>
+        <button>What is iGEM?</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button>Who are we?</button>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<div class="red-line"></div>
+
+
+
+
+
+
+<mat-grid-list class="sample-grid" cols="2" rowHeight="200px" gutterSize="0px">
+    <mat-grid-tile class="sample-tile sample-tile-red" colspan="1" rowspan="2">
+        <span>
+            <h2><mat-icon class="h2-icon">supervisor_account</mat-icon>What is iGEM?</h2>
+            <div class="igem-cards-row">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-subtitle>International Genetically Engineered Machine</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            iGEM Guelph is an international competitive synthetic biology team that competes in the
+                            annual
+                            International Genetically Engineered Machine (iGEM) Grand Jamboree hosted in Paris, France.
+                        </p>
+                        <p>
+                            The competition challenges students around the world to solve real-world problems ranging
+                            from
+                            oncology to fashion using synthetic biology.
+                        </p>
+                        <div class="guelph-line-thin"></div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <button matButton="" type="button" (click)="openIgemWebsite()">Learn More About iGEM</button>
+        </span>
+    </mat-grid-tile>
+    <mat-grid-tile class="sample-tile sample-tile-image" [style.backgroundImage]="'url(assets/austin.jpg)'" colspan="1"
+        rowspan="3">
+        <span>Tile 3</span>
+    </mat-grid-tile>
+    <mat-grid-tile class="sample-tile sample-tile-green" colspan="1" rowspan="1">
+        <span>
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-subtitle>Our Team Structure</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>
+                        The interdisciplinary nature of this competition requires teams of varying specializations
+                        to
+                        support iGEM Guelph's work.
+                    </p>
+                    <p>
+                        At iGEM Guelph, we've established 4 crucial areas to create a comprehensive,
+                        inter-departmental
+                        organization that supports our research and promotes the growth of our mission: <b>Core
+                            Research,
+                            Technology, Community, and Business.</b>
+                    </p>
+                    <div class="guelph-line-thin"></div>
+                </mat-card-content>
+            </mat-card>
+        </span>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<div class="guelph-line"></div>
+
+
+<div>
+    <h2><mat-icon class="h2-icon">supervisor_account</mat-icon>What is iGEM?</h2>
+    <div class="home-row">
+        <div class="vertical-aligned-overview">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-subtitle>International Genetically Engineered Machine</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>
+                        iGEM Guelph is an international competitive synthetic biology team that competes in the annual
+                        International Genetically Engineered Machine (iGEM) Grand Jamboree hosted in Paris, France.
+                    </p>
+                    <p>
+                        The competition challenges students around the world to solve real-world problems ranging from
+                        oncology to fashion using synthetic biology.
+                    </p>
+                    <div class="guelph-line-thin"></div>
+                    <p>
+                        The interdisciplinary nature of this competition requires teams of varying specializations to
+                        support iGEM Guelph's work.
+                    </p>
+                    <p>
+                        At iGEM Guelph, we've established 4 crucial areas to create a comprehensive, inter-departmental
+                        organization that supports our research and promotes the growth of our mission: <b>Core
+                            Research,
+                            Technology, Community, and Business.</b>
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <button matButton="" type="button" (click)="openIgemWebsite()">Learn More About iGEM</button>
+
+        </div>
+        <div class="sub-list">
+            <div class="core">
+                <h3>Core Research</h3>
+                <!--WET LAB-->
+                <app-info-card [title]="'Wet Lab'"
+                    [subtitle]="'Complete synthetic biology research central to iGEM Guelph\'s seasonal projects'"
+                    [backgroundColor]="'rgba(255, 255, 255, 0.212);'"
+                    [sideBorderColor]="'rgb(160, 0, 0)'"></app-info-card>
+            </div>
+        </div>
+        <div class="sub-list">
+            <div class="core">
+                <h3>Technology</h3>
+                <!--SOFTWARE-->
+                <app-info-card [title]="'Software'"
+                    [subtitle]="'Apply automation initiatives to internal processes & core research'"
+                    [backgroundColor]="'rgba(255, 255, 255, 0.212);'"
+                    [sideBorderColor]="'rgb(185, 185, 15)'"></app-info-card>
+                <!--DRY LAB-->
+                <app-info-card [title]="'Dry Lab'"
+                    [subtitle]="'Develop mathematical & computational models to support Wet Lab'"
+                    [backgroundColor]="'rgba(255, 255, 255, 0.212);'"
+                    [sideBorderColor]="'rgb(185, 185, 15)'"></app-info-card>
+                <!--ENGINEERING-->
+                <app-info-card [title]="'Engineering'" [subtitle]="'Creating novel hardware to support core research'"
+                    [backgroundColor]="'rgba(255, 255, 255, 0.212);'"
+                    [sideBorderColor]="'rgb(185, 185, 15)'"></app-info-card>
+            </div>
+        </div>
+        <div class="sub-list">
+            <div class="core">
+                <h3>Community</h3>
+                <!--HUMAN PRACTICES-->
+                <app-info-card [title]="'Human Practices'"
+                    [subtitle]="'Designating impactful & ethical research, engaging in stakeholder management'"
+                    [backgroundColor]="'rgba(255, 255, 255, 0.212);'"
+                    [sideBorderColor]="'rgb(0, 0, 0)'"></app-info-card>
+                <!--OUTREACH-->
+                <app-info-card [title]="'Outreach'"
+                    [subtitle]="'Share knowledge & promote iGEM Guelph within the community'"
+                    [backgroundColor]="'rgba(255, 255, 255, 0.212);'"
+                    [sideBorderColor]="'rgb(0, 0, 0)'"></app-info-card>
+            </div>
+        </div>
+        <div class="sub-list">
+            <div class="core">
+                <h3>Business</h3>
+                <!--BUSINESS-->
+                <app-info-card [title]="'Business'"
+                    [subtitle]="'Manage entrepreneurial activities & engage in financial logistics'"
+                    [backgroundColor]="'rgba(255, 255, 255, 0.212);'"
+                    [sideBorderColor]="'rgb(160, 0, 0)'"></app-info-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="guelph-line"></div>
+
+<app-image-carousel
+    [images]="['assets/labstuff.jpg','assets/igempresentation.jpg', 'assets/idksomewhere.jpg','assets/teamhappy.jpeg', 'assets/theyresittinghappy.jpg']"
+    [tileSpans]="[
+    { colSpan: 8, rowSpan: 6 },
+    { colSpan: 4, rowSpan: 3 },
+    { colSpan: 4, rowSpan: 3 },
+    { colSpan: 6, rowSpan: 4 },
+    { colSpan: 6, rowSpan: 4 }]"></app-image-carousel>
+
+<div class="guelph-line"></div>
+
+<section class="who-achievements-container">
+    <div class="who-we-are-section">
+        <h2><mat-icon class="h2-icon">insert_emoticon</mat-icon>Who we are</h2>
+
+        <div class="home-row">
+            <div class="achievements-intro">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-subtitle>Our Mission</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            We won't wait until graduation to preserve what we value the most: Improving Life. iGEM
+                            Guelph is dedicated to identifying problems and addressing their interdisciplinary
+                            complexities with innovation. We are committed to identifying opportunities for learning and
+                            teaching in all walks of life.
+                        </p>
+
+                        <div class="guelph-line-thin"></div>
+
+                    </mat-card-content>
+                    <mat-card-header><mat-card-subtitle>Our structure</mat-card-subtitle></mat-card-header>
+                    <mat-card-content>
+                        <p>
+
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <button matButton="" type="button" (click)="openIgemWebsite()">Our Team</button>
+            <button matButton="" type="button" (click)="openIgemWebsite()">Projects</button>
+        </div>
+    </div>
+
+    <div class="achievements-section">
+        <h2><mat-icon class="h2-icon">timeline</mat-icon>Our Achievements</h2>
+
+        <section class="achievements-timeline">
+            <div class="timeline-grid" role="list">
+                <div class="timeline-tile" role="listitem">
+                    <article class="timeline-event">
+                        <div class="event-card">
+                            <h3><mat-icon aria-hidden="true" style="color: rgb(32, 134, 7)">star</mat-icon>2026-03-18
+                            </h3>
+                            <h4><a href="https://www.linkedin.com/posts/enactusguelph_enactus-enactusguelph-innovation-activity-7440468389761859584-dALc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYBvNoBL8qYbkRsvRib0ecyPBTW8Caxxbs"
+                                    target="_blank">Sequester wins Enactus Canada Central Regional Competition in
+                                    Innovation & Impact Challenge</a></h4>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="timeline-tile" role="listitem">
+                    <article class="timeline-event">
+                        <div class="event-card">
+                            <h3><mat-icon aria-hidden="true" style="color: rgb(218, 123, 0)">stars</mat-icon>2025-11-01
+                            </h3>
+                            <h4><a href="https://2025.igem.wiki/guelph/awards" target="_blank">iGEM Guelph Wins Gold
+                                    Medal Award for the 2025 iGEM Competition</a></h4>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="timeline-tile" role="listitem">
+                    <article class="timeline-event">
+                        <div class="event-card">
+                            <h3><mat-icon aria-hidden="true" style="color: grey">build</mat-icon>2025-10-08</h3>
+                            <h4><a href="https://2025.igem.wiki/guelph/home" target="_blank">iGEM Guelph Presents
+                                    Sequester</a></h4>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="timeline-tile" role="listitem">
+                    <article class="timeline-event">
+                        <div class="event-card">
+                            <h3><mat-icon aria-hidden="true" style="color: grey">build</mat-icon>2024-10-08</h3>
+                            <h4><a href="https://2024.igem.wiki/guelph/index.html" target="_blank">iGEM Guelph Presents
+                                    AshGuard</a></h4>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="timeline-tile" role="listitem">
+                    <article class="timeline-event">
+                        <div class="event-card">
+                            <h3><mat-icon aria-hidden="true" style="color: rgb(218, 123, 0)">stars</mat-icon>2019</h3>
+                            <h4><a href="https://2019.igem.org/Team:Guelph" target="_blank">iGEM Guelph Wins Gold Medal
+                                    Award for the 2019 iGEM Competition</a></h4>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="timeline-tile" role="listitem">
+                    <article class="timeline-event">
+                        <div class="event-card">
+                            <h3><mat-icon aria-hidden="true" style="color: grey">build</mat-icon>2019</h3>
+                            <h4><a href="https://2019.igem.org/Team:Guelph" target="_blank">iGEM Guelph presents
+                                    VioSensor</a></h4>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

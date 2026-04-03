@@ -1,0 +1,47 @@
+:host {
+  display: inline-block;
+}
+
+.arrow-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #dd6b20;
+  border-radius: 999px;
+  background: transparent;
+  color: #dd6b20;
+  cursor: pointer;
+  font: inherit;
+}
+
+.button-label,
+.button-arrow {
+  transition: transform 180ms ease;
+}
+
+.button-label {
+  display: inline-block;
+}
+
+.button-arrow {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.arrow-button:hover .button-label,
+.arrow-button:focus-visible .button-label {
+  transform: scale(1.05);
+}
+
+.arrow-button:hover .button-arrow,
+.arrow-button:focus-visible .button-arrow {
+  transform: translateX(4px);
+}
+
+.arrow-button:focus-visible {
+  outline: 2px solid rgba(221, 107, 32, 0.45);
+  outline-offset: 2px;
+}

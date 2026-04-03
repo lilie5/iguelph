@@ -1,0 +1,199 @@
+@import url('../../../styles.css');
+
+.achievements {
+	width: 1400px;
+	border-collapse: collapse;
+	margin: 1.5rem auto 0;
+}
+
+.achievements tr {
+	margin-bottom: 15px;
+	align-items: stretch;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.achievements td {
+	width: 100%;
+	max-width: 420px;
+	display: flex;
+}
+
+.achievements td:only-child {
+	margin-inline: auto;
+}
+
+.achievements mat-card {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.structure-diagram {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(160px, 1fr));
+	grid-template-rows: auto auto auto;
+	column-gap: clamp(1rem, 2vw, 2rem);
+	row-gap: 1rem;
+	max-width: 1400px;
+	margin: 1.5rem auto;
+	align-items: start;
+	justify-items: center;
+}
+
+.diagram-card {
+	width: min(250px, 100%);
+}
+
+.card-wet-lab {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.card-software {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.card-dry-lab {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.card-outreach {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+.card-human-practices {
+	grid-column: 3;
+	grid-row: 2;
+}
+
+.card-business {
+	grid-column: 4;
+	grid-row: 2;
+}
+
+.diagram-label {
+	margin: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.35em;
+	text-transform: uppercase;
+	font-size: clamp(1.25rem, 2vw, 2rem);
+	font-weight: 500;
+	line-height: 1.1;
+	text-align: center;
+	transition: color 200ms ease;
+}
+
+.diagram-label mat-icon {
+	font-size: 1em;
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	color: inherit;
+}
+
+.label-core-research {
+	grid-column: 1;
+	grid-row: 3;
+}
+
+.label-technology {
+	grid-column: 2;
+	grid-row: 3;
+}
+
+.label-community {
+	grid-column: 3;
+	grid-row: 3;
+}
+
+.label-business {
+	grid-column: 4;
+	grid-row: 3;
+}
+
+.label-core-research:hover {
+	color: #c53030;
+}
+
+.card-wet-lab:hover ~ .label-core-research {
+	color: #c53030;
+}
+
+.label-technology:hover {
+	color: #2563eb;
+}
+
+.card-software:hover ~ .label-technology,
+.card-dry-lab:hover ~ .label-technology {
+	color: #2563eb;
+}
+
+.label-community:hover {
+	color: #dd6b20;
+}
+
+.card-outreach:hover ~ .label-community,
+.card-human-practices:hover ~ .label-community {
+	color: #dd6b20;
+}
+
+.label-business:hover {
+	color: #2f855a;
+}
+
+.card-business:hover ~ .label-business {
+	color: #2f855a;
+}
+
+.info-card {
+	width: min(100% - 40px, 1400px);
+	margin-inline: auto;
+}
+
+.igem-info-title {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.igem-info-logo {
+	width: 64px;
+	height: 64px;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+	.structure-diagram {
+		grid-template-columns: repeat(2, minmax(180px, 1fr));
+		grid-template-rows: repeat(5, auto);
+		row-gap: 1.5rem;
+	}
+
+	.card-wet-lab,
+	.card-software,
+	.card-dry-lab,
+	.card-outreach,
+	.card-human-practices,
+	.card-business,
+	.label-core-research,
+	.label-technology,
+	.label-community,
+	.label-business {
+		grid-column: auto;
+		grid-row: auto;
+	}
+}
+
+@media (max-width: 520px) {
+	.structure-diagram {
+		grid-template-columns: 1fr;
+	}
+}

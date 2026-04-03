@@ -1,0 +1,155 @@
+<div class="hero-carousel">
+    <app-image-carousel
+        [images]="['assets/labstuff.jpg','assets/igempresentation.jpg', 'assets/idksomewhere.jpg','assets/teamhappy.jpeg', 'assets/theyresittinghappy.jpg']"
+        [tileSpans]="[
+        { colSpan: 8, rowSpan: 6 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 6, rowSpan: 6 },
+        { colSpan: 6, rowSpan: 6 }]"></app-image-carousel>
+
+    <div class="hero-overlay">
+        <img class="hero-logo" src="assets/shortenedlogo.png" alt="iGEM Guelph logo" />
+        <div class="hero-text">
+            <h1 class="hero-title">OUR TEAM</h1>
+            <h3 class="hero-subtitle" style="color: rgb(255, 33, 33)">VIEW OUR TEAM THIS SEASON.</h3>
+        </div>
+    </div>
+</div>
+
+<div class="guelph-line"></div>
+<table class="sticky-buttons" data-aos="fade-up">
+    <tbody>
+        <tr>
+            <th><button type="button" (click)="scrollToSection('presidents')">Our Presidents</button></th>
+            <th><button type="button" (click)="scrollToSection('research')">Research</button></th>
+            <th><button type="button" (click)="scrollToSection('technology')">Technology</button></th>
+            <th><button type="button" (click)="scrollToSection('community')">Community</button></th>
+            <th><button type="button" (click)="scrollToSection('business')">Business</button></th>
+        </tr>
+    </tbody>
+</table>
+
+<div id="presidents" class="black-line"></div>
+<h2><mat-icon class="h2-icon">military_tech</mat-icon>OUR PRESIDENTS</h2>
+
+<mat-card class="recruitment-card hover-accent-card">
+    <mat-card-header>
+        <mat-card-title><mat-icon>military_tech</mat-icon>Our Presidents</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            iGEM Guelph's organizational integrity and driving opportunities (both internally and externally) happen at the top of the chain. Our presidents spearhead the work needed for this club to maintain passionate innovation and continuous improvement. Liasoning with each department and harnessing their talents ensures success is within reach.
+        </p>
+        <div class="guelph-line-thin"></div>
+    </mat-card-content>
+    <mat-card-footer>
+        <h4><b>Presidents:</b> Erica Firouzbehi, Kaitlyn Root</h4>
+    </mat-card-footer>
+</mat-card>
+
+<div id="research" class="black-line"></div>
+
+<h2><mat-icon class="h2-icon">science</mat-icon>RESEARCH</h2>
+
+<mat-card class="recruitment-card hover-accent-card">
+    <mat-card-header>
+        <mat-card-title><mat-icon>science</mat-icon>Wet Lab</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            The Wet Lab team aims to complete a novel synthetic biology project, ensuring adherence to laboratory safety, the scientific method, and responsible research practices. We are committed to creating a space that allows individuals to build experience in microbiology and molecular biology techniques while having fun and connecting with others.
+        </p>
+        <app-button-with-arrow text="We're hiring!" routerLink="/recruitment"></app-button-with-arrow>
+        <div class="guelph-line-thin"></div>
+    </mat-card-content>
+    <mat-card-footer>
+        <h4><b>Directors:</b> Noa Maerov, Jamie Power</h4>
+    </mat-card-footer>
+</mat-card>
+<div id="technology" class="black-line"></div>
+
+<h2><mat-icon class="h2-icon">precision_manufacturing</mat-icon>TECHNOLOGY</h2>
+
+<mat-card class="recruitment-card hover-accent-card">
+    <mat-card-header>
+        <mat-card-title><mat-icon>precision_manufacturing</mat-icon>Dry Lab</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            The Dry Lab team puts the dream into the machine. The engineering working group builds the hardware that integrates our engineered organism into the solution. The modelling & software working group seek ways to optimize the operation to fruition.
+        </p>
+        <app-button-with-arrow text="We're hiring!" routerLink="/recruitment"></app-button-with-arrow>
+        <div class="guelph-line-thin"></div>
+    </mat-card-content>
+    <mat-card-footer>
+    </mat-card-footer>
+</mat-card>
+
+<mat-card class="recruitment-card hover-accent-card">
+    <mat-card-header>
+        <mat-card-title><mat-icon>computer</mat-icon>Software</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            The Software team is an initiative held by iGEM Guelph to deliver a maintainable and accessible wiki every season, whilst creating solutions that assist in the delivery of iGEM Guelph's deliverables. 
+            While the original objectives were to create a wiki, many of the goals evolved to develop tools/applicatons that support various processes held in iGEM Guelph. 
+        </p>
+        <div class="guelph-line-thin"></div>
+    </mat-card-content>
+    <mat-card-footer>
+        <h4><b>Directors:</b> Sukhman Kaur, Lucas Ilie </h4>
+    </mat-card-footer>
+</mat-card>
+<div id="community" class="black-line"></div>
+
+<h2><mat-icon class="h2-icon">campaign</mat-icon>COMMUNITY</h2>
+
+<mat-card class="recruitment-card hover-accent-card">
+    <mat-card-header>
+        <mat-card-title><mat-icon>campaign</mat-icon>Outreach</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            Outreach at iGEM is the department that is jack-of-all-trades and master of all external communication.
+             Their responsibilities include connecting with other iGEM Teams and organizations to collaborate on projects, hosting events, executing scientific education initiatives, and operating the social media of our team. These creative individuals combine their love for science with the broader community.
+        </p>
+        <app-button-with-arrow text="We're hiring!" routerLink="/recruitment"></app-button-with-arrow>
+        <div class="guelph-line-thin"></div>
+    </mat-card-content>
+    <mat-card-footer>
+        <h4><b>Directors:</b> Soha Mohammad</h4>
+    </mat-card-footer>
+</mat-card>
+
+<mat-card class="recruitment-card hover-accent-card">
+    <mat-card-header>
+        <mat-card-title><mat-icon class="h2-icon">handshake</mat-icon>Human Practices</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+Human practices aims to solve the connection of ethicality, stakeholder investments, and user requirements to all of the departments within iGEM Guelph. While this department is split across all teams, human practices is a critical piece; their work ensures that the delivery of each team’s projects are safe, ethical, and meet the requirements of who they are delivering to.
+        </p>
+        <div class="guelph-line-thin"></div>
+    </mat-card-content>
+</mat-card>
+
+<div id="business" class="black-line"></div>
+
+<h2><mat-icon class="h2-icon">business_center</mat-icon>BUSINESS</h2>
+
+<mat-card class="recruitment-card hover-accent-card">
+    <mat-card-header>
+        <mat-card-title><mat-icon>business_center</mat-icon>Business</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            Business powers our mission behind the scenes. From securing sponsorships and partnerships to handling the team budget, they ensure iGEM Guelph has the resources it needs to thrive.
+        </p>
+        <app-button-with-arrow text="We're hiring!" routerLink="/recruitment"></app-button-with-arrow>
+        <div class="guelph-line-thin"></div>
+    </mat-card-content>
+    <mat-card-footer>
+        <h4><b>Directors:</b> Emilia Petkovski</h4>
+    </mat-card-footer>
+</mat-card>

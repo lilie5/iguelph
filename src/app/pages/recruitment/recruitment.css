@@ -1,0 +1,102 @@
+@import url('../../../styles.css');
+
+h5 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    color: rgb(175, 70, 0);
+}
+
+mat-accordion {
+    display: block;
+    width: min(100% - 40px, 1080px);
+    margin: 0 auto 2rem;
+}
+
+mat-expansion-panel {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.32);
+}
+
+mat-expansion-panel::before {
+    display: none;
+}
+
+mat-expansion-panel + mat-expansion-panel {
+    margin-top: 1rem;
+}
+
+.role-panel-heading {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: rgb(36, 36, 36);
+    font-weight: 600;
+}
+
+.role-panel-title-icon {
+    color: rgb(170, 40, 0);
+    font-size: 1.35rem;
+    width: 1.35rem;
+    height: 1.35rem;
+    line-height: 1.35rem;
+    flex-shrink: 0;
+}
+
+.role-panel-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(510px, 1.1fr);
+    gap: 2rem;
+    align-items: start;
+    margin: 1.5rem 0 1rem;
+}
+
+.role-panel-summary {
+    margin: 0;
+}
+
+.role-panel-list {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.26);
+    border: rgba(173, 173, 173, 0.404) solid 0.5px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.role-panel-section-title {
+    margin: 0 0 0.5rem;
+    color: rgb(36, 36, 36);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.role-panel-bullets {
+    margin: 0;
+    padding-left: 1.3rem;
+    color: rgb(54, 54, 54);
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.role-panel-bullets li + li {
+    margin-top: 0.4rem;
+}
+
+.time-commitment {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: 0.25rem;
+    padding-top: 0.85rem;
+}
+
+@media (max-width: 900px) {
+    .role-panel-layout {
+        grid-template-columns: 1fr;
+    }
+}

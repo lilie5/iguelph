@@ -1,0 +1,19 @@
+<app-fixed-background-image src="assets/igemposter.jpg" opacity="0.35"></app-fixed-background-image>
+
+<div class="app-content">
+	<app-navbar [navItems]="navItems"></app-navbar>
+	<router-outlet></router-outlet>
+	<footer class="site-footer" aria-label="Site footer">
+		<p class="footer-copy">© 2025 iGEM Guelph. All rights reserved.</p>
+
+		<div class="footer-social" aria-label="Social media links">
+			<a class="social-button" href="https://www.linkedin.com/company/igem-guelph" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+				<img src="assets/linkedin-logo.png" alt="LinkedIn" />
+			</a>
+
+			<a class="social-button" href="https://www.instagram.com/igem.guelph/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+				<img src="assets/instagram-logo.png" alt="Instagram" style="width: 3rem; height: 3rem; margin-top: 5px;" />
+			</a>
+		</div>
+	</footer>
+</div>

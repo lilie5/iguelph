@@ -1,0 +1,10 @@
+<div class="flip-card" (click)="toggleFlip()" [class.flipped]="isFlipped()">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>{{ title() }}</h3>
+    </div>
+    <div class="flip-card-back">
+      <p>{{ description() }}</p>
+    </div>
+  </div>
+</div>

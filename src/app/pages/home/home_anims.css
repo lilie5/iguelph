@@ -1,0 +1,59 @@
+/* ─── Hero entrance animations ───────────────────────────────────────────────
+   1. Logo fades in from center of the viewport, then slides left to its
+      natural flex position.
+   2. h1 + h3 slide out rightward from behind the logo once it has moved.
+──────────────────────────────────────────────────────────────────────────── */
+
+@keyframes hero-logo-intro {
+    0% {
+        transform: translateX(28vw);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hero-title-slide {
+    from {
+        opacity: 0;
+        transform: translateX(-6rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes hero-subtitle-slide {
+    from {
+        opacity: 0;
+        transform: translateX(-6rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Applied to elements ---------------------------------------------------- */
+
+.hero-logo {
+    animation: hero-logo-intro 1.5s cubic-bezier(0.25, 0.46, 0.15, 0.94) both;
+}
+
+.hero-title {
+    opacity: 0;
+    animation: hero-title-slide 0.55s ease-out forwards;
+    animation-delay: 2s;
+}
+
+.hero-subtitle {
+    opacity: 0;
+    animation: hero-subtitle-slide 0.55s ease-out forwards;
+    animation-delay: 3s;
+}

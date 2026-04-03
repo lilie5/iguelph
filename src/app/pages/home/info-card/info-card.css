@@ -1,0 +1,26 @@
+@import url('../home.css');
+@import url('../../../../styles.css');
+
+mat-card {
+    width: 240px;
+    height: 180px;
+    margin: 15px 0 20px 0;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    border-left: 4px solid rgb(160, 0, 0);
+}
+
+mat-card-title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+mat-card-subtitle {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
