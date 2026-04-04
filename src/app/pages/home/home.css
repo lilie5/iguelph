@@ -70,7 +70,12 @@
 	grid-row: 2;
 }
 
-.card-business {
+.card-corporate {
+	grid-column: 4;
+	grid-row: 1;
+}
+
+.card-finance {
 	grid-column: 4;
 	grid-row: 2;
 }
@@ -147,7 +152,8 @@
 	color: #2f855a;
 }
 
-.card-business:hover ~ .label-business {
+.card-corporate:hover ~ .label-business,
+.card-finance:hover ~ .label-business {
 	color: #2f855a;
 }
 
@@ -182,7 +188,8 @@
 	.card-dry-lab,
 	.card-outreach,
 	.card-human-practices,
-	.card-business,
+	.card-corporate,
+	.card-finance,
 	.label-core-research,
 	.label-technology,
 	.label-community,
