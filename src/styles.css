@@ -203,7 +203,7 @@ tr button:hover {
 
 .who-we-are-cards {
     display: flex;
-    gap: 140px;
+    gap: 100px;
     align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
