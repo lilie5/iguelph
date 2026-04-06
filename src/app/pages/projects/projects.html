@@ -1,9 +1,154 @@
-<div class="web-top">
-	<img class="hero-logo" src="assets/shortenedlogo.png" alt="iGEM Guelph logo" />
-	<div class="top-text">
-		<h1 class="hero-title">OUR PROJECTS</h1>
-		<h4>Explore the initiatives and research we are building this season.</h4>
+<div class="hero-carousel">
+	<app-image-carousel
+		[images]="['assets/labstuff.jpg','assets/igempresentation.jpg', 'assets/idksomewhere.jpg','assets/teamhappy.jpeg', 'assets/theyresittinghappy.jpg']"
+		[tileSpans]="[
+        { colSpan: 8, rowSpan: 6 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 6, rowSpan: 6 },
+        { colSpan: 6, rowSpan: 6 }]"></app-image-carousel>
+
+	<div class="hero-overlay">
+		<img class="hero-logo" src="assets/shortenedlogo.png" alt="iGEM Guelph logo" />
+		<div class="hero-text">
+			<h1 class="hero-title">OUR PROJECTS</h1>
+			<h3 class="hero-subtitle" style="color: rgb(252, 252, 252)">View our projects & other initatives.</h3>
+		</div>
 	</div>
 </div>
 
 <div class="guelph-line"></div>
+
+<table class="sticky-buttons" data-aos="fade-up">
+	<tbody>
+		<tr>
+			<th><button type="button" (click)="scrollToSection('projects')">Our Projects</button></th>
+			<th><button type="button" (click)="scrollToSection('initiatives')">Other Initiatives</button></th>
+		</tr>
+	</tbody>
+</table>
+
+<div class="black-line" id="projects"></div>
+
+<h2>Our Projects</h2>
+
+<app-image-info-card [title]="'SeQUESTer'"
+	[text]="'A microbial system for detection and sequestration of toxic heavy metals.'"
+	[imagePath]="'assets/sequester.png'" [goldStar]="true" [alignRight]="false"
+	[href]="'https://2025.igem.wiki/guelph/home'" [date]="'2025'">
+</app-image-info-card>
+
+<app-image-info-card [title]="'Ash Guard'"
+	[text]="'Engineered a bioinsecticide of genetically modified bacteria to target the emerald ash borer, an invasive species.'"
+	[imagePath]="'assets/ashguard.png'" [goldStar]="false" [alignRight]="true" [href]="'https://2024.igem.wiki/guelph/'"
+	[date]="'2024'">
+</app-image-info-card>
+
+<app-image-info-card [title]="'BloomBiota'"
+	[text]="'Using synthetic biology to create a probiotic solution to tackle vitamin B12 deficiency.'"
+	[imagePath]="'assets/bloombiota.png'" [goldStar]="false" [alignRight]="false"
+	[href]="'https://2023.igem.wiki/guelph/'" [date]="'2023'">
+</app-image-info-card>
+
+<app-image-info-card [title]="'Project Ceres'"
+	[text]="'A targeted solution to fungus gnats in tomato greenhouses. Using recombinant Bacillus subtilis cells to develop a soil-borne biopesticide with a biofilm forming soil microbe.'"
+	[imagePath]="'assets/projectceres.png'" [goldStar]="false" [alignRight]="true"
+	[href]="'https://2022.igem.wiki/guelph'" [date]="'2022'">
+</app-image-info-card>
+
+
+<app-image-info-card [title]="'Synbio Sanitizer'"
+	[text]="'Synthetic biology-powered hand sanitizer project, focused on AMR during COVID-19.'"
+	[imagePath]="'assets/synbiosanitizer.png'" [goldStar]="false" [alignRight]="false"
+	[href]="'https://2021.igem.org/Team:Guelph'" [date]="'2021'">
+</app-image-info-card>
+
+<app-image-info-card [title]="'VioSensor'"
+	[text]="'Developing an antibiotic biosensor as a diagnostic tool to measure tetracycline in animal products.'"
+	[imagePath]="'assets/viosensor.png'" [goldStar]="true" [alignRight]="true"
+	[href]="'https://2019.igem.org/Team:Guelph'" [date]="'2019'">
+</app-image-info-card>
+
+<div class="hero-carousel">
+	<app-image-carousel
+		[images]="['assets/labstuff.jpg','assets/igempresentation.jpg', 'assets/idksomewhere.jpg','assets/teamhappy.jpeg', 'assets/theyresittinghappy.jpg']"
+		[tileSpans]="[
+        { colSpan: 8, rowSpan: 6 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 6, rowSpan: 6 },
+        { colSpan: 6, rowSpan: 6 }]"></app-image-carousel>
+</div>
+<div class="guelph-line" id="initiatives"></div>
+<h2>Other Initiatives</h2>
+
+
+<div class="initiative">
+	<h3>Elementary School Outreach</h3>
+
+	<p>
+		“The iGem student-led program provided an engaging and meaningful learning experience for our Grade 5 and 6
+		students. The leaders guided the group through hands-on experiments, thoughtful discussions, and interactive
+		activities that connected directly to biodiversity and its importance for both human and animal health. Their
+		ability to explain complex ideas in an age-appropriate way ensured that students not only participated actively
+		but also deepened their understanding of real-world science. The facilitators were enthusiastic, kind, and
+		adaptable throughout the sessions, responding well to the needs and interests of the students. They created a
+		welcoming atmosphere where curiosity was encouraged, and every student felt comfortable asking questions and
+		sharing ideas. Their energy and passion for science were contagious, sparking excitement and engagement among
+		the students. Overall, the iGem program was a valuable experience that combined learning with fun. The
+		leadership skills of the facilitators shone through in the way they balanced structure with flexibility, keeping
+		students focused while allowing space for creativity. The students came away with not only a stronger grasp of
+		biodiversity and health connections, but also a positive memory of exploring science in a hands-on and
+		collaborative way. Thank you!"
+	</p>
+	<strong>- Elizabeth McIntyre, Junior Teacher, Fred A Hamilton Public School</strong>
+
+</div>
+
+<div class="initiative">
+	<h3>Creative Encounters</h3>
+
+	<p>
+		“This summer, I was able to experience iGEM's mentors Sky sessions for our Grade 4-5 STEM summer camp called
+		Earth, Ocean, and Air. In this camp, one of the days was focused on microbes and their important role in human
+		biology. In their session, iGEM volunteers walked our campers through a short, engaging presentation about what
+		microbes are and their importance for our health. After this presentation, the volunteers introduced an activity
+		where the campers were able to create keychains that commemorated what they had learned. After observing all of
+		the iGEM sessions that ran for Earth, Ocean, and Sky this summer, I can wholeheartedly say that iGEM was an
+		incredible mentor for our audience. All of their volunteers came with a positive attitude and were excited to
+		engage youth with STEM, and were amazing role models for our campers.”
+	</p>
+	<strong>- Owen Hennink, Creative Encounters Co-Director</strong>
+
+</div>
+
+<div class="initiative">
+	<h3>Biosecurity Escape Room & Events</h3>
+
+	<p>
+		To welcome new students, iGEM Guelph hosted a Biosecurity Escape Room in which participants roleplayed as
+		scientists locked in a lab by hackers after sensitive information was leaked. The Escape Room involved a series
+		of puzzles with cues and items scattered in the room that would help participants identify the leaked pathogen's
+		genetic modifications and figure out which organization infiltrated the lab. Multiple rooms were run at once
+		with each team being timed to provide a competitive and immersive edge to the game.
+		<br>
+		<app-button-with-arrow text="View Escape Room Guide" href="https://static.igem.wiki/teams/5611/contribution/biosecurity-breach-igem-escape-room-guide.pdf" target="_blank"></app-button-with-arrow>
+
+	</p>
+
+</div>
+
+<div class="initiative">
+	<h3>Treasure Boxes</h3>
+
+	<p>
+		iGEM Guelph created Treasure Boxes, curated lesson kits filled with hands-on science activities designed for
+		students in grades 1-4. Each activity was carefully chosen to be curriculum-appropriate with the Ontario
+		Ministry of Education standards, engaging, and easy to follow, allowing young learners to explore science in a
+		fun and accessible way. The boxes were delivered to classrooms, giving teachers ready-to-use resources that
+		brought scientific concepts to life for their students. Its contents are easily re-creatable with accessible
+		materials that we would encourage other organizations, iGEM teams, or educators to adopt. Lastly, the College of Biological Sciences Office of Educational
+		Scholarships and Practice provided us with a generous grant to carry this project out.
+
+	</p>
+</div>
