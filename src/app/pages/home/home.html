@@ -118,14 +118,21 @@
         </app-flippable-card>
     </div>
 
-    <div class="diagram-card card-corporate">
-        <app-flippable-card [title]="'Corporate'" [description]="'Accounting, entrepreneurship, budgeting, marketing'">
-        </app-flippable-card>
-    </div>
+    <div class="diagram-business-stack">
+        <div class="diagram-card card-accounting">
+            <app-flippable-card [title]="'Accounting'" [description]="'Budgeting, financial planning'">
+            </app-flippable-card>
+        </div>
 
-    <div class="diagram-card card-finance">
-        <app-flippable-card [title]="'Finance'" [description]="'Accounting, entrepreneurship, budgeting, marketing'">
-        </app-flippable-card>
+        <div class="diagram-card card-finance">
+            <app-flippable-card [title]="'Finance'" [description]="'Financial planning, investment, budgeting, fundraising'">
+            </app-flippable-card>
+        </div>
+
+        <div class="diagram-card card-entrepreneurship">
+            <app-flippable-card [title]="'Entrepreneurship'" [description]="'Business development, innovation, marketing'">
+            </app-flippable-card>
+        </div>
     </div>
 
     <p class="diagram-label label-core-research"><mat-icon>science</mat-icon>Research</p>
