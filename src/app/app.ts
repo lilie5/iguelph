@@ -21,6 +21,7 @@ export class App {
   navItems: NavItem[] = [
     { text: 'Team', link: '/about', icon: 'info' },
     { text: 'Our Projects', link: '/projects', icon: 'science' },
-    { text: 'Recruitment', link: '/recruitment', icon: 'groups' }
+    { text: 'Recruitment', link: '/recruitment', icon: 'groups' },
+    { text: 'Contact', link: '/contact', icon: 'email' },
   ];
 }
