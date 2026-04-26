@@ -37,7 +37,15 @@ jobs:
           if [ -n "${{ vars.PAGES_BASE_PATH }}" ]; then
             echo "PAGES_BASE_PATH=${{ vars.PAGES_BASE_PATH }}" >> "$GITHUB_ENV"
           else
-            echo "PAGES_BASE_PATH=/${GITHUB_REPOSITORY#*/}/" >> "$GITHUB_ENV"
+            echo "PAGES_BASE_PATH=/" >> "$GITHUB_ENV"
+          fi
+
+      - name: Resolve custom domain
+        run: |
+          if [ -n "${{ vars.PAGES_CUSTOM_DOMAIN }}" ]; then
+            echo "PAGES_CUSTOM_DOMAIN=${{ vars.PAGES_CUSTOM_DOMAIN }}" >> "$GITHUB_ENV"
+          else
+            echo "PAGES_CUSTOM_DOMAIN=igemguelph.org" >> "$GITHUB_ENV"
           fi
 
       - name: Build static site
@@ -46,7 +54,7 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           test -d dist/igem_guelph_website/browser
-          echo "igemguelph.org" > dist/igem_guelph_website/browser/CNAME
+          echo "$PAGES_CUSTOM_DOMAIN" > dist/igem_guelph_website/browser/CNAME
           touch dist/igem_guelph_website/browser/.nojekyll
           cp dist/igem_guelph_website/browser/index.html dist/igem_guelph_website/browser/404.html
 
