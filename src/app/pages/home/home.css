@@ -1,7 +1,7 @@
 @import url('../../../styles.css');
 
 .achievements {
-	width: 1400px;
+	width: auto;
 	border-collapse: collapse;
 	margin: 1.5rem auto 0;
 }

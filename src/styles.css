@@ -14,12 +14,7 @@ body {
 }
 
 .web-top h1 {
-    font-size: 72px;
-    margin: 0;
-    opacity: 0;
-    transform: translateX(-24px);
-    animation: web-top-title-in 700ms ease-out forwards;
-    font-size: 24px;
+    font-size: clamp(20px, 5vw, 24px);
     margin: 0;
     opacity: 0;
     transform: translateX(-24px);
@@ -49,7 +44,7 @@ h2, h3 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: clamp(24px, 6vw, 32px);
     margin: 24px auto 48px;
     text-align: center;
     color:rgb(170, 40, 0);
@@ -59,13 +54,14 @@ h2 {
     justify-content: center;
     gap: 0.55rem;
     width: fit-content;
+    max-width: 90%;
     padding: 0.5rem 1.5rem;
     border-radius: 999px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
-    font-size: 46px;
+    font-size: clamp(28px, 7vw, 46px);
     margin: 24px auto 32px;
     text-align: center;
     color:rgb(36, 36, 36);
@@ -73,11 +69,11 @@ h3 {
 
 #who-are-we,
 #what-is-igem {
-    scroll-margin-top: 140px;
+    scroll-margin-top: clamp(80px, 20vw, 140px);
 }
 
 h4 {
-    font-size: 18px;
+    font-size: clamp(16px, 4vw, 18px);
 }
 
 a {
@@ -88,7 +84,7 @@ a {
     background-position: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 200ms ease;
-    font-size: 18px;
+    font-size: clamp(16px, 4vw, 18px);
 }
 
 a:hover,
@@ -100,8 +96,17 @@ a:focus-visible {
     display: flex;
     align-items: center;
     gap: 24px;
-    margin-left: 75px;
+    margin-left: clamp(12px, 10vw, 75px);
     margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+    .achievements-intro {
+        flex-direction: column;
+        gap: 12px;
+        margin-left: 0;
+        align-items: flex-start;
+    }
 }
 
 .achievements-intro-text {
@@ -203,7 +208,7 @@ tr button:hover {
 
 .who-we-are-cards {
     display: flex;
-    gap: 100px;
+    gap: clamp(20px, 5vw, 100px);
     align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
@@ -214,9 +219,16 @@ tr button:hover {
     max-width: 420px;
 }
 
+@media (max-width: 800px) {
+    .who-we-are-cards {
+        gap: 20px;
+    }
+}
+
 
 mat-card {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     gap: 16px;
     border: rgba(173, 173, 173, 0.404) solid 0.5px;
     border-radius: 12px;
@@ -321,8 +333,16 @@ mat-card-content button:hover {
 }
 
 mat-accordion {
-    width: 50%;
+    width: min(100%, 800px);
+    max-width: 50%;
     margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    mat-accordion {
+        max-width: 100%;
+        width: min(calc(100% - 30px), 800px);
+    }
 }
 
 mat-expansion-panel-header {

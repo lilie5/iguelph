@@ -2,8 +2,8 @@
 
 h5 {
     text-align: center;
-    margin-top: 15px;
-    font-size: 20px;
+    margin-top: clamp(12px, 3vw, 15px);
+    font-size: clamp(18px, 4vw, 20px);
     color: rgb(175, 70, 0);
 }
 
@@ -47,10 +47,16 @@ mat-expansion-panel + mat-expansion-panel {
 
 .role-panel-layout {
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(510px, 1.1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
     align-items: start;
     margin: 1.5rem 0 1rem;
+}
+
+@media (min-width: 900px) {
+    .role-panel-layout {
+        grid-template-columns: minmax(0, 0.8fr) minmax(510px, 1.1fr);
+    }
 }
 
 .role-panel-summary {
@@ -73,7 +79,7 @@ mat-expansion-panel + mat-expansion-panel {
 .role-panel-section-title {
     margin: 0 0 0.5rem;
     color: rgb(36, 36, 36);
-    font-size: 1.05rem;
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
     font-weight: 600;
 }
 

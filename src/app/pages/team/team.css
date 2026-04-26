@@ -7,7 +7,7 @@
 }
 
 .recruitment-card mat-card-title {
-    font-size: 32px;
+    font-size: clamp(24px, 5vw, 32px);
     font-weight: 600;
     display: inline-flex;
     align-items: center;
@@ -22,13 +22,13 @@
 }
 
 .recruitment-card p {
-    font-size: 18px;
+    font-size: clamp(16px, 4vw, 18px);
 }
 
 .recruitment-card mat-card-footer {
     display: flex;
     justify-content: flex-end;
-    margin-right: 15px;
+    margin-right: clamp(10px, 2vw, 15px);
     font-family: 'Verdana', sans-serif;
-    font-size: 16px;
+    font-size: clamp(14px, 3vw, 16px);
 }
