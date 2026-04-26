@@ -350,10 +350,19 @@ mat-expansion-panel-header {
     border: rgba(173, 173, 173, 0.404) solid 0.5px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: visible;
 }
+
+@media (max-width: 600px) {
+    mat-expansion-panel-header {
+        padding: 8px 12px !important;
+    }
+}
+
 mat-panel-title {
-    font-size: 24px;
-    font-family: 'Manrope', sans-serif;;
+    font-size: clamp(18px, 4vw, 24px);
+    font-family: 'Manrope', sans-serif;
+    word-break: break-word;
 }
 
 mat-panel-description {

@@ -29,19 +29,22 @@ mat-expansion-panel + mat-expansion-panel {
 }
 
 .role-panel-heading {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 0.65rem;
     color: rgb(36, 36, 36);
     font-weight: 600;
+    flex-wrap: wrap;
+    min-width: 0;
+    word-break: break-word;
 }
 
 .role-panel-title-icon {
     color: rgb(170, 40, 0);
-    font-size: 1.35rem;
-    width: 1.35rem;
-    height: 1.35rem;
-    line-height: 1.35rem;
+    font-size: clamp(1.1rem, 3vw, 1.35rem);
+    width: clamp(1.1rem, 3vw, 1.35rem);
+    height: clamp(1.1rem, 3vw, 1.35rem);
+    line-height: clamp(1.1rem, 3vw, 1.35rem);
     flex-shrink: 0;
 }
 
@@ -104,5 +107,20 @@ mat-expansion-panel + mat-expansion-panel {
 @media (max-width: 900px) {
     .role-panel-layout {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .role-panel-heading {
+        gap: 0.4rem;
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+
+    .role-panel-title-icon {
+        flex-shrink: 0;
+    }
+
+    mat-expansion-panel {
+        margin: 0 -8px !important;
     }
 }
