@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: '/iguelph',
   allowedHosts: [],
   supportedLocales: {
   "en-US": ""

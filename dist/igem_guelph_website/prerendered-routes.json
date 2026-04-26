@@ -1,9 +1,9 @@
 {
   "routes": {
-    "/": {},
-    "/about": {},
-    "/projects": {},
-    "/recruitment": {},
-    "/sponsors": {}
+    "/iguelph": {},
+    "/iguelph/about": {},
+    "/iguelph/projects": {},
+    "/iguelph/recruitment": {},
+    "/iguelph/sponsors": {}
   }
 }
