@@ -12,6 +12,6 @@ export default `<!doctype html>
 
 <body ngcm="">
   <app-root></app-root>
-<script src="main-LOBAGOYM.js" type="module"></script></body>
+<script src="main-OXZQXOX3.js" type="module"></script></body>
 
 </html>`;

@@ -3,12 +3,13 @@ type = "javascript"
 main = "src/index.ts"
 compatibility_date = "2024-04-01"
 
-# Route your custom domain to this worker
+# Serve static assets from the dist directory
+assets = { directory = "dist/igem_guelph_website/browser" }
+
 [[routes]]
 pattern = "igemguelph.org/*"
 zone_name = "igemguelph.org"
 
-# Optional: also handle www subdomain
 [[routes]]
 pattern = "www.igemguelph.org/*"
 zone_name = "igemguelph.org"
