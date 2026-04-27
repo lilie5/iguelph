@@ -1,0 +1,16 @@
+name = "iguelph"
+type = "javascript"
+main = "src/index.ts"
+compatibility_date = "2024-04-01"
+
+# Route your custom domain to this worker
+[[routes]]
+pattern = "igemguelph.org/*"
+zone_name = "igemguelph.org"
+
+# Optional: also handle www subdomain
+[[routes]]
+pattern = "www.igemguelph.org/*"
+zone_name = "igemguelph.org"
+
+workers_dev = true
