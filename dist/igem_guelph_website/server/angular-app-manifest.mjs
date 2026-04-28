@@ -28,13 +28,13 @@ export default {
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 1181, hash: '7f7f474fcd339fc9eb19e4ea6eb738a906202c90485078ad7f38fb3885b78da6', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1538, hash: 'cd5b817df80d609669b5731c6277eb1925627b1c3a108b8e4fc52bfaa5870566', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'sponsors/index.html': {size: 47733, hash: '016e1e3a789a37001efda4afa39174f7a7d3227ea87d6d33e997ae8e154bff95', text: () => import('./assets-chunks/sponsors_index_html.mjs').then(m => m.default)},
-    'index.html': {size: 97138, hash: '875a186a44f7b15a9e251d8d81fbb56ec2927797a8fd03e3d856e6b7f04d59bf', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
-    'projects/index.html': {size: 95202, hash: 'd83ddbb99bd4b2ce811d04e66b71c2efb6154241bd1334e1065c4dfb21c04965', text: () => import('./assets-chunks/projects_index_html.mjs').then(m => m.default)},
-    'about/index.html': {size: 86106, hash: '2642d5f1949c078960e1503ffc95371c03839ee40732f46006c65ac9cfb2e435', text: () => import('./assets-chunks/about_index_html.mjs').then(m => m.default)},
-    'recruitment/index.html': {size: 122111, hash: '5c798467ba5afab4bca70ee3569d529b874e2036856bb7e00470391159fa2c83', text: () => import('./assets-chunks/recruitment_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 1181, hash: '2e124cc37398794902811912869b9a73efad43de4024e71104b64c255b5891b9', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1538, hash: 'e34845ef8a4373cdcef8d52a24bd5316a663e215b4f955b59d939f681d77aa0c', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'sponsors/index.html': {size: 47733, hash: 'c92060c3da6203125b47b8ddbc6af1b0e04abdef7a419b94217479c35566aaa5', text: () => import('./assets-chunks/sponsors_index_html.mjs').then(m => m.default)},
+    'index.html': {size: 97138, hash: 'ef6c7a7a3e0423b810aa7ec04b18691cb523d0284e21ac66c5798adcb2019f41', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'about/index.html': {size: 86106, hash: '7f98827de6c89569b4871c97fb6a505bcd9cb0e08f0571e91b264d2a04960134', text: () => import('./assets-chunks/about_index_html.mjs').then(m => m.default)},
+    'projects/index.html': {size: 95202, hash: '8d6d94c318a7af50052d0b155aacd77a7ad437a97fa5a7ba90dde74b339f4140', text: () => import('./assets-chunks/projects_index_html.mjs').then(m => m.default)},
+    'recruitment/index.html': {size: 120317, hash: '61594907fb2a81bb0e16ec1aacaca54e8bc7ebbde0b52b9ed5958e4b70b44962', text: () => import('./assets-chunks/recruitment_index_html.mjs').then(m => m.default)},
     'styles-P7RFJIQM.css': {size: 7401, hash: '9HXNwc73a5M', text: () => import('./assets-chunks/styles-P7RFJIQM_css.mjs').then(m => m.default)}
   },
 };

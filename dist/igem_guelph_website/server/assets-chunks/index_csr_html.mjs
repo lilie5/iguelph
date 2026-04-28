@@ -12,6 +12,6 @@ export default `<!doctype html>
 
 <body ngcm="">
   <app-root></app-root>
-<script src="main-GPMSLNVK.js" type="module"></script></body>
+<script src="main-6P2O6V5T.js" type="module"></script></body>
 
 </html>`;
