@@ -206,6 +206,47 @@ tr button:hover {
     margin-top: 10px;
 }
 
+@media (max-width: 800px) {
+    .sticky-buttons {
+        display: block;
+        width: min(100% - 16px, 100%);
+        margin: 16px auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .sticky-buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sticky-buttons tbody {
+        display: block;
+        width: max-content;
+        min-width: 100%;
+    }
+
+    .sticky-buttons tr {
+        width: max-content;
+        min-width: 100%;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding: 0 4px 10px;
+    }
+
+    .sticky-buttons th {
+        flex: 0 0 auto;
+    }
+
+    .sticky-buttons button {
+        margin-top: 0;
+        white-space: nowrap;
+        font-size: 15px;
+        padding: 0.7rem 1rem;
+    }
+}
+
 .who-we-are-cards {
     display: flex;
     gap: clamp(20px, 5vw, 100px);
