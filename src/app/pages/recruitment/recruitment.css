@@ -9,7 +9,7 @@ h5 {
 
 mat-accordion {
     display: block;
-    width: min(100% - 40px, 1080px);
+    width: min(100% - 40px, 1400px);
     margin: 0 auto 2rem;
 }
 
@@ -26,6 +26,10 @@ mat-expansion-panel::before {
 
 mat-expansion-panel + mat-expansion-panel {
     margin-top: 1rem;
+}
+
+mat-panel-title {
+    font-size: clamp(1.0rem, 3vw, 1.2rem);
 }
 
 .role-panel-heading {
@@ -56,9 +60,9 @@ mat-expansion-panel + mat-expansion-panel {
     margin: 1.5rem 0 1rem;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1400px) {
     .role-panel-layout {
-        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 2fr);
     }
 }
 
