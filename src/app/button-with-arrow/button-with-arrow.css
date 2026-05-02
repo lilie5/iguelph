@@ -5,8 +5,10 @@
 .arrow-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.5rem 0.75rem;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1rem;
+  min-height: var(--tap, 44px);
   border: 1px solid #dd6b20;
   border-radius: 999px;
   background: transparent;

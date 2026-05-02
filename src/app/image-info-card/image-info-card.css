@@ -88,10 +88,16 @@
 .image-container {
   flex-shrink: 0;
   width: 100%;
-  max-width: 240px;
+  max-width: clamp(200px, 30vw, 360px);
   aspect-ratio: 1;
   background-color: rgba(0, 0, 0, 0.12);
   border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .image-container {
+    max-width: min(320px, 80%);
+  }
 }
 
 .image-link {

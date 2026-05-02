@@ -3,7 +3,7 @@
 
 mat-card {
     width: 100%;
-    max-width: 240px;
+    max-width: clamp(220px, 28vw, 320px);
     height: auto;
     min-height: 180px;
     margin: 15px 0 20px 0;

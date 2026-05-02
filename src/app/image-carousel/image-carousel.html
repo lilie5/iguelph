@@ -3,7 +3,7 @@
     <mat-grid-list
       class="collage-grid"
       [cols]="gridColumns"
-      [rowHeight]="gridRowHeight"
+      [rowHeight]="gridRowHeight()"
       [gutterSize]="gridGutter"
     >
       @for (tile of gridTiles(); track tile.src) {

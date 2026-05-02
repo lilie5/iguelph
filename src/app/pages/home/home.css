@@ -1,7 +1,16 @@
 @import url('../../../styles.css');
 
+.lead-text {
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	font-size: clamp(1rem, 2.5vw, 1.25rem);
+	line-height: 1.55;
+}
+
 .achievements {
-	width: auto;
+	width: min(100% - 2rem, 1400px);
 	border-collapse: collapse;
 	margin: 1.5rem auto 0;
 }
@@ -9,12 +18,14 @@
 .achievements tr {
 	margin-bottom: 15px;
 	align-items: stretch;
-	justify-content: space-between;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
 	width: 100%;
 }
 
 .achievements td {
-	width: 100%;
+	flex: 1 1 280px;
 	max-width: 420px;
 	display: flex;
 }
@@ -183,11 +194,12 @@
 	flex-shrink: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 	.structure-diagram {
-		grid-template-columns: repeat(2, minmax(180px, 1fr));
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		grid-template-rows: repeat(5, auto);
 		row-gap: 1.5rem;
+		padding-inline: 1rem;
 	}
 
 	.card-wet-lab,
@@ -208,8 +220,14 @@
 	}
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
 	.structure-diagram {
 		grid-template-columns: 1fr;
+		padding-inline: 1rem;
+	}
+
+	.diagram-card {
+		width: 100%;
+		max-width: 320px;
 	}
 }
