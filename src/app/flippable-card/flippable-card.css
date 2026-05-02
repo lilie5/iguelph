@@ -16,8 +16,9 @@
 .flip-card-inner {
   position: relative;
   width: 100%;
-  max-width: 250px;
+  max-width: clamp(220px, 28vw, 320px);
   min-height: 100px;
+  margin-inline: auto;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;

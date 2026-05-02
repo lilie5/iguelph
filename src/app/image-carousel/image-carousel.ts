@@ -1,9 +1,14 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  HostListener,
+  PLATFORM_ID,
   computed,
+  inject,
   input,
+  signal,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 type CollageImage = {
@@ -26,11 +31,34 @@ type GridTile = CollageImage & TileSpan;
   styleUrl: './image-carousel.css',
 })
 export class ImageCarousel {
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly viewportWidth = signal(this.getInitialWidth());
+
   readonly images = input<string[]>([]);
   readonly tileSpans = input<TileSpan[]>([]);
   readonly gridColumns = 12;
-  readonly gridRowHeight = '76px';
   readonly gridGutter = '0px';
+
+  readonly gridRowHeight = computed(() => {
+    const width = this.viewportWidth();
+    if (width <= 480) return '36px';
+    if (width <= 768) return '52px';
+    if (width <= 1024) return '64px';
+    return '76px';
+  });
+
+  @HostListener('window:resize')
+  onResize() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.viewportWidth.set(window.innerWidth);
+    }
+  }
+
+  private getInitialWidth(): number {
+    return isPlatformBrowser(this.platformId)
+      ? window.innerWidth
+      : 1280;
+  }
 
   readonly collageImages = computed<CollageImage[]>(() =>
     this.images()

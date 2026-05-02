@@ -1,8 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('style_anims.css');
 
+/*
+ * Responsive breakpoints (use these consistently in @media queries):
+ *   --bp-sm: 480px   small phones
+ *   --bp-md: 768px   tablet portrait / large phones
+ *   --bp-lg: 1024px  tablet landscape / small laptop
+ *   --bp-xl: 1280px  desktop
+ */
+:root {
+    --gutter: clamp(1rem, 4vw, 2rem);
+    --content-max: 1400px;
+    --tap: 44px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     background-color: #e4e4e4;
+    overflow-x: hidden;
 }
 
 .web-top {
@@ -243,7 +270,8 @@ tr button:hover {
         margin-top: 0;
         white-space: nowrap;
         font-size: 15px;
-        padding: 0.7rem 1rem;
+        padding: 0.85rem 1.1rem;
+        min-height: var(--tap, 44px);
     }
 }
 
@@ -293,7 +321,8 @@ mat-card-content {
 
 mat-card-content button {
     width: fit-content;
-    padding: 0.5rem 1.25rem;
+    padding: 0.65rem 1.25rem;
+    min-height: var(--tap, 44px);
     color: rgb(31, 31, 31);
     border-radius: 999px;
     border: none;
