@@ -1,0 +1,137 @@
+<div class="hero-carousel">
+    <app-image-carousel
+        [images]="['assets/labstuff.jpg','assets/igempresentation.jpg', 'assets/idksomewhere.jpg','assets/teamhappy.jpeg', 'assets/theyresittinghappy.jpg']"
+        [tileSpans]="[
+        { colSpan: 8, rowSpan: 6 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 4, rowSpan: 3 },
+        { colSpan: 6, rowSpan: 6 },
+        { colSpan: 6, rowSpan: 6 }]"></app-image-carousel>
+
+    <div class="hero-overlay">
+        <img class="hero-logo" src="assets/shortenedlogo.png" alt="iGEM Guelph logo" />
+        <div class="hero-text">
+            <h1 class="hero-title">iGEM GUELPH</h1>
+            <h3 class="hero-subtitle">CANADA'S MOST PASSIONATE SYNTHETIC BIOLOGY TEAM.</h3>
+        </div>
+    </div>
+</div>
+
+<div class="guelph-line"></div>
+
+<table class="sticky-buttons" data-aos="fade-up">
+    <tbody>
+        <tr>
+            <th><button type="button" (click)="scrollToSection('get-in-touch')">Get in Touch</button></th>
+            <th><button type="button" (click)="scrollToSection('socials')">Our Socials</button></th>
+            <th><button type="button" (click)="scrollToSection('join-us')">Join Us</button></th>
+        </tr>
+    </tbody>
+</table>
+
+<div class="black-line" id="get-in-touch"></div>
+
+<h2><mat-icon class="h2-icon">mail</mat-icon>GET IN TOUCH</h2>
+
+<div class="contact-layout">
+
+    <mat-card class="contact-form-card hover-accent-card">
+        <mat-card-header>
+            <mat-card-title><mat-icon>edit</mat-icon>Send a Message</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="form-row">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Your Name</mat-label>
+                    <input matInput [(ngModel)]="name" placeholder="Jane Smith" required />
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Your Email</mat-label>
+                    <input matInput [(ngModel)]="email" type="email" placeholder="jane@example.com" required />
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="outline" class="form-field form-field-full">
+                <mat-label>Subject</mat-label>
+                <input matInput [(ngModel)]="subject" placeholder="Sponsorship, collaboration, general question..." />
+                <mat-icon matSuffix>subject</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field form-field-full">
+                <mat-label>Message</mat-label>
+                <textarea matInput [(ngModel)]="message" rows="6" placeholder="Tell us what's on your mind..." required></textarea>
+            </mat-form-field>
+
+            <button
+                mat-flat-button
+                class="submit-btn"
+                [disabled]="!name || !email || !message"
+                (click)="submitForm()">
+                <mat-icon>send</mat-icon>
+                Send Message
+            </button>
+        </mat-card-content>
+    </mat-card>
+
+</div>
+
+<div class="guelph-line" id="socials"></div>
+
+<h2><mat-icon class="h2-icon">share</mat-icon>OUR SOCIALS</h2>
+
+<div class="socials-row">
+    <a href="https://www.linkedin.com/company/igem-guelph" target="_blank" rel="noopener noreferrer" class="social-card social-linkedin">
+        <mat-card class="hover-accent-card">
+            <mat-card-content>
+                <div class="social-card-inner">
+                    <mat-icon svgIcon="linkedin" class="social-icon">open_in_new</mat-icon>
+                    <div>
+                        <p class="social-platform">LinkedIn</p>
+                        <p class="social-handle">&#64;igem-guelph</p>
+                    </div>
+                    <mat-icon class="social-arrow">arrow_forward</mat-icon>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </a>
+
+    <a href="https://www.instagram.com/igem.guelph" target="_blank" rel="noopener noreferrer" class="social-card social-instagram">
+        <mat-card class="hover-accent-card">
+            <mat-card-content>
+                <div class="social-card-inner">
+                    <mat-icon class="social-icon">photo_camera</mat-icon>
+                    <div>
+                        <p class="social-platform">Instagram</p>
+                        <p class="social-handle">&#64;igem.guelph</p>
+                    </div>
+                    <mat-icon class="social-arrow">arrow_forward</mat-icon>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </a>
+</div>
+
+<div class="black-line" id="join-us"></div>
+
+<h2><mat-icon class="h2-icon">groups</mat-icon>JOIN US</h2>
+
+<mat-card class="join-card hover-accent-card">
+    <mat-card-header>
+        <mat-card-title><mat-icon>star</mat-icon>Become a Member</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            iGEM Guelph is always looking for passionate students to join our team. We recruit across all faculties
+            — whether your background is in biology, engineering, computer science, business, or the arts,
+            there's a place for you here.
+        </p>
+        <app-button-with-arrow text="View open positions" routerLink="/recruitment"></app-button-with-arrow>
+        <div class="guelph-line-thin"></div>
+    </mat-card-content>
+    <mat-card-footer>
+        <h4>Questions about recruitment? Email us at <a href="mailto:igem@uoguelph.ca">igem&#64;uoguelph.ca</a></h4>
+    </mat-card-footer>
+</mat-card>
